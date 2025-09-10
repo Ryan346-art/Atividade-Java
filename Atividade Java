@@ -1,0 +1,41 @@
+public class Aluno {
+    // Atributos
+    private String nome;
+    private int idade;
+    private String ra;           // Registro Acadêmico
+    private String curso;
+    private double mediaNotas;
+
+    // Construtor
+    public Aluno(String nome, int idade, String ra, String curso, double mediaNotas) {
+        this.nome = nome;
+        this.idade = idade;
+        this.ra = ra;
+        this.curso = curso;
+        this.mediaNotas = mediaNotas;
+    }
+
+   
+
+    // Método para imprimir os dados do aluno
+    @Override
+    public String toString() {
+        return "Aluno {" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", ra='" + ra + '\'' +
+                ", curso='" + curso + '\'' +
+                ", mediaNotas=" + mediaNotas +
+                '}';
+    }
+
+    // Exemplo de uso
+    public static void main(String[] args) {
+        Aluno a = new Aluno("Ana Silva", 22, "RA2023001", "Engenharia da Computação", 8.75);
+        Aluno b = new Aluno("Carlos Andrade", 23, "RA2023012", "Engenharia Civil", 7.75);
+        Aluno c = new Aluno("Rebeca Ferandes", 32, "RA2024001", "Engenharia MEcanica", 9.00);
+        System.out.println(a.toString());
+        System.out.println(b.toString());
+        System.out.println(c.toString());
+    }
+}
